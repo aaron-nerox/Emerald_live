@@ -15,8 +15,13 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: modulus;
+  src: url('./assets/fonts/Modulus.ttf');
+}
 
-#app {
-  
+@font-face {
+  font-family: modulus_bold;
+  src: url('./assets/fonts/Modulus-Bold.otf');
 }
 </style>
