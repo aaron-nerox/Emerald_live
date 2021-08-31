@@ -34,15 +34,31 @@
       </div>
     </div>
   </section>
+  <section id="examples" class="x-card section-container">
+    <div class="inner-section-container2">
+      <p class="title">Take a look at our components</p>
+      <div class="divider-container">
+        <div class="x-card component-container">
+          <br/><br/><br/><br/><br/>
+        </div>
+        <div class="x-card component-container">
+          <br/><br/><br/><br/><br/>
+        </div>
+      </div>
+    </div>
+  </section>
+  <x-footer></x-footer>
 </template>
 
 <script>
 import XHeader from "../components/Header.vue";
+import XFooter from "../components/Footer.vue";
 
 export default {
   name: "Home",
   components: {
     XHeader,
+    XFooter,
   },
 };
 </script>
@@ -97,6 +113,21 @@ export default {
 
 .color-item>p{
   font-family: modulus_bold;
+}
+
+.divider-container{
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.component-container{
+  background-color: #D9EDFF;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 </style>

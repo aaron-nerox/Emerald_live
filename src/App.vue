@@ -96,6 +96,11 @@ html{
   font-size: 1.1em;
 }
 
+.text-bold{
+  font-family: modulus_bold;
+  font-size: 1.1em;
+}
+
 .x-card{
   background-color: white;
   border-radius: 20px;
