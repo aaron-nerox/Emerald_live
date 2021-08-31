@@ -8,7 +8,7 @@
             <img src="../assets/images/main_logo.svg" alt="decor" />
         </kinesis-element>
         <a href="#about">
-            <kinesis-element :strength="10" type="depth" id="link">
+            <kinesis-element :strength="20" type="depth" id="link">
                 <img src="../assets/icons/down_arrow.svg" alt="down arrow" class="arrow-btn">
             </kinesis-element>
         </a>

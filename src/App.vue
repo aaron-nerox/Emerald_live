@@ -24,6 +24,26 @@ export default {
   src: url("./assets/fonts/Modulus-Bold.otf");
 }
 
+#color-primary{
+  background-color: #7DBEFA;
+}
+
+#color-primary-dark{
+  background-color: #0479E6;
+}
+
+#color-accent{
+  background-color: #ABD6FF;
+}
+
+#color-light{
+  background-color: #D9EDFF;
+}
+
+#color-gradient{
+  background-image: linear-gradient(308deg,#7DBEFA,#0479E6);
+}
+
 html{
   scroll-behavior: smooth;
 }

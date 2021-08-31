@@ -12,6 +12,28 @@
       </div>
     </div>
   </section>
+  <section id="colors" class="x-card section-container">
+    <div class="inner-section-container2">
+      <p class="title"> Example X color palette</p>
+      <div class="inner-section-container">
+        <div  class="color-item" id="color-primary">
+          <p class="text">#7DBEFA</p>
+        </div>
+        <div  class="color-item" id="color-primary-dark">
+          <p class="text">#0479E6</p>
+        </div>
+        <div  class="color-item" id="color-accent">
+          <p class="text">#ABD6FF</p>
+        </div>
+        <div  class="color-item" id="color-light">
+          <p class="text">#D9EDFF</p>
+        </div>
+        <div  class="color-item" id="color-gradient">
+          <p class="text">Gradient</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -38,6 +60,13 @@ export default {
   align-items: center;
 }
 
+.inner-section-container2{
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about-logo{
   width: 18%;
   border-radius: 20px;
@@ -52,6 +81,22 @@ export default {
 
 .title{
   margin: 0px;
+}
+
+.color-item{
+  height: 90px;
+  width: 90px;
+  border-radius: 20px;
+  margin: 20px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  
+}
+
+.color-item>p{
+  font-family: modulus_bold;
 }
 
 </style>
