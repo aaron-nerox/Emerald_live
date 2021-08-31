@@ -39,7 +39,12 @@
       <p class="title">Take a look at our components</p>
       <div class="divider-container">
         <div class="x-card component-container">
-          <br/><br/><br/><br/><br/>
+          <x-button icn="facebook.svg" 
+            :textOnly="false" 
+            :iconOnly="true"
+            :isDisabled="true">
+              Example
+          </x-button>
         </div>
         <div class="x-card component-container">
           <br/><br/><br/><br/><br/>
@@ -53,12 +58,14 @@
 <script>
 import XHeader from "../components/Header.vue";
 import XFooter from "../components/Footer.vue";
+import XButton from "../components/Xbutton.vue";
 
 export default {
   name: "Home",
   components: {
     XHeader,
     XFooter,
+    XButton
   },
 };
 </script>
