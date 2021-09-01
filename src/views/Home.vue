@@ -45,6 +45,10 @@
             :isDisabled="true">
               Example
           </x-button>
+          <x-search 
+          hint="Search for something" 
+          icon="search.svg"
+          :accountImage="url" />
         </div>
         <div class="x-card component-container">
           <br/><br/><br/><br/><br/>
@@ -59,14 +63,21 @@
 import XHeader from "../components/Header.vue";
 import XFooter from "../components/Footer.vue";
 import XButton from "../components/Xbutton.vue";
+import XSearch from "../components/XsearchBar.vue";
 
 export default {
   name: "Home",
   components: {
     XHeader,
     XFooter,
-    XButton
+    XButton,
+    XSearch
   },
+  data(){
+    return{
+      url: "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
+    }
+  }
 };
 </script>
 
