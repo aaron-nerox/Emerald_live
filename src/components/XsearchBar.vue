@@ -28,6 +28,19 @@ export default {
 </script>
 
 <style scoped>
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #7DBEFA;
+  opacity: 0.5; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #7DBEFA;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #7DBEFA;
+}
+
 .main-container{
     background: white;
     border-radius: 1000px;
