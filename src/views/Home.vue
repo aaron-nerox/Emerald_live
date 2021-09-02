@@ -39,12 +39,51 @@
       <p class="title">Take a look at our components</p>
       <div class="divider-container">
         <div class="x-card component-container">
-          <x-button icn="facebook.svg" 
-            :textOnly="false" 
-            :iconOnly="true"
-            :isDisabled="true">
-              Example
-          </x-button>
+          <div class="x-card button-container">
+            <p class="subtitle">The X interactive buttons</p>
+            <div>
+              <x-button icn="facebook.svg" 
+                :textOnly="false" 
+                :iconOnly="true"
+                :isDisabled="false">
+                  Example
+              </x-button>
+              <x-button icn="facebook.svg" 
+                :textOnly="false" 
+                :iconOnly="true"
+                :isDisabled="true">
+                  Example
+              </x-button>
+            </div>
+            <div>
+              <x-button icn="facebook.svg" 
+                :textOnly="true" 
+                :iconOnly="false"
+                :isDisabled="false">
+                  Example
+              </x-button>
+              <x-button icn="facebook.svg" 
+                :textOnly="true" 
+                :iconOnly="false"
+                :isDisabled="true">
+                  Example
+              </x-button>
+            </div>
+            <div>
+              <x-button icn="facebook.svg" 
+                :textOnly="false" 
+                :iconOnly="false"
+                :isDisabled="false">
+                  Example
+              </x-button>
+              <x-button icn="facebook.svg" 
+                :textOnly="false" 
+                :iconOnly="false"
+                :isDisabled="true">
+                  Example
+              </x-button>
+            </div>
+          </div>
           <x-search 
           hint="Search for something" 
           icon="search.svg"
@@ -148,4 +187,10 @@ export default {
   align-items: center;
 }
 
+.button-container{
+  width: 90%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
 </style>

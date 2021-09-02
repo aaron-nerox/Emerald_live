@@ -42,8 +42,16 @@ export default {
     background-image: linear-gradient(308deg,grey,grey);
 }
 
+.disabled:hover{
+    background-image: linear-gradient(308deg,rgb(83, 83, 83),rgb(83, 83, 83));
+}
+
 .enabled{
     background-image: linear-gradient(308deg,#7DBEFA,#0479E6);
+}
+
+.enabled:hover{
+    background-image: linear-gradient(308deg,#ABD6FF ,#7DBEFA);
 }
 
 .Square{
@@ -57,6 +65,7 @@ export default {
     font-size: 1.2em;
     color: white;
     padding: 8px;
+    margin: 10px;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -64,8 +73,8 @@ export default {
 }
 
 .button-icon{
-    height: 25px;
-    width: 35px;
+    height: 20px;
+    width: 30px;
     margin: 2px;
 }
 
