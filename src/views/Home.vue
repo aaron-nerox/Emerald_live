@@ -84,10 +84,18 @@
               </x-button>
             </div>
           </div>
-          <x-search 
-          hint="Search for something" 
-          icon="search.svg"
-          :accountImage="url" />
+          <div class="x-card search-container">
+            <p class="subtitle">The X search bars</p>
+            <x-search 
+            hint="Search for something" 
+            icon="search.svg"
+            :accountImage="url" />
+            <br /><br />
+            <x-translucent-search 
+            hint="Search for something" 
+            icon="search_white.svg"
+            :accountImage="url"/>
+          </div>
         </div>
         <div class="x-card component-container">
           <br/><br/><br/><br/><br/>
@@ -103,6 +111,7 @@ import XHeader from "../components/Header.vue";
 import XFooter from "../components/Footer.vue";
 import XButton from "../components/Xbutton.vue";
 import XSearch from "../components/XsearchBar.vue";
+import XTranslucentSearch from "../components/Xtranslucent.vue";
 
 export default {
   name: "Home",
@@ -110,7 +119,8 @@ export default {
     XHeader,
     XFooter,
     XButton,
-    XSearch
+    XSearch,
+    XTranslucentSearch
   },
   data(){
     return{
@@ -192,5 +202,14 @@ export default {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+}
+
+.search-container{
+  width: 90%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(308deg,#7DBEFA,#0479E6);
+  color: white;
 }
 </style>
