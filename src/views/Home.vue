@@ -56,7 +56,8 @@
               </x-button>
             </div>
             <div>
-              <x-button icn="facebook.svg" 
+              <x-button 
+                icn="facebook.svg" 
                 :textOnly="true" 
                 :iconOnly="false"
                 :isDisabled="false">
@@ -96,6 +97,12 @@
             icon="search_white.svg"
             :accountImage="url"/>
           </div>
+          <div class="x-card search-container">
+            <x-input 
+            icon="search.svg"
+            hint="input a text here"
+            />
+          </div>
         </div>
         <div class="x-card component-container">
           <br/><br/><br/><br/><br/>
@@ -112,6 +119,7 @@ import XFooter from "../components/Footer.vue";
 import XButton from "../components/Xbutton.vue";
 import XSearch from "../components/XsearchBar.vue";
 import XTranslucentSearch from "../components/Xtranslucent.vue";
+import XInput from "../components/Xinput.vue";
 
 export default {
   name: "Home",
@@ -120,7 +128,8 @@ export default {
     XFooter,
     XButton,
     XSearch,
-    XTranslucentSearch
+    XTranslucentSearch,
+    XInput,
   },
   data(){
     return{
@@ -198,14 +207,14 @@ export default {
 }
 
 .button-container{
-  width: 90%;
+  width: 80%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
 }
 
 .search-container{
-  width: 90%;
+  width: 80%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
