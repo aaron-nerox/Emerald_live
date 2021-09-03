@@ -1,12 +1,17 @@
 <template>
   <div class="main-container">
-      <img :src="resolveImageUrl(icon)" alt="icon" class="main-icon" />
-      <input type="text"  
-        :placeholder="hint" 
-        class="input-style" 
-        :class="[textClass]" 
-        v-model="input"/>
-      <div :class="[mainPointer, PointerClass]"></div>
+        <img :src="resolveImageUrl(icon)" alt="icon" class="main-icon" />
+        <input :type="this.mainType"  
+            :placeholder="hint" 
+            class="input-style" 
+            :class="[textClass]" 
+            v-model="input"/>
+        <div v-if="this.inputType === 'text'" 
+            :class="[mainPointer, PointerClass]"></div>
+        <img v-else  
+            :src="resolveImageUrl(this.passwordIcon)"
+            v-on:click="toggleSwitch()"
+            alt="eye icon" class="toggle-icon"/>
   </div>
 </template>
 
@@ -16,11 +21,21 @@ export default {
     props: {
         icon: String,
         hint: String,
+        inputType: String
     },
     methods:{
         resolveImageUrl: function (path) {
             let images = require.context('../assets/icons', false, /\.svg$|\.png$/)
             return images("./"+path)
+        },
+        toggleSwitch: function (){
+            if(this.mainType == "text"){
+                this.mainType = "password"
+                this.passwordIcon = "toggle_visible.svg"
+            }else{
+                this.mainType = "text"
+                this.passwordIcon = "toggle_invisible.svg"
+            }
         }
     },
     data(){
@@ -28,7 +43,9 @@ export default {
             mainPointer: "pointer",
             text: "",
             PointerClass: "neutral",
-            textClass: "input-txt-neutral"
+            textClass: "input-txt-neutral",
+            mainType: this.inputType,
+            passwordIcon: "toggle_invisible.svg"
         }
     },
     computed: {
@@ -37,16 +54,20 @@ export default {
                 return this.text
             },
             set(newInput){
-                this.text = newInput
-                this.PointerClass = "verified"
-                this.textClass = "input-txt-verified"
-                if(this.text.includes("@")){
-                    this.PointerClass = "danger"
-                    this.textClass = "input-txt-danger"
-                }
-                if(this.text.length === 0){
-                    this.PointerClass = "neutral"
-                    this.textClass = "input-txt-neutral"
+                    this.text = newInput
+
+               if(this.inputType == "text"){
+                    this.PointerClass = "verified"
+                    this.textClass = "input-txt-verified"
+                    if(this.text.includes("@")){
+                        this.PointerClass = "danger"
+                        this.textClass = "input-txt-danger"
+                    }
+
+                    if(this.text.length === 0){
+                        this.PointerClass = "neutral"
+                        this.textClass = "input-txt-neutral"
+                    }
                 }
             }
         }
@@ -105,6 +126,7 @@ export default {
 
 .input-style{
     margin: 8px;
+    margin-right: 24px;
     outline: none;
     border: none;
     background: transparent;
@@ -122,5 +144,12 @@ export default {
 
 .input-txt-danger{
     color: rgb(255, 52, 52);
+}
+
+.toggle-icon{
+    height: 18px;
+    widows: 18px;
+    margin: 8px;
+    margin-right: 16px;
 }
 </style>

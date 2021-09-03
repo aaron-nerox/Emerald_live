@@ -101,6 +101,7 @@
             <x-input 
             icon="search.svg"
             hint="input a text here"
+            inputType="password"
             />
           </div>
         </div>
