@@ -36,6 +36,15 @@ export default {
                 this.mainType = "text"
                 this.passwordIcon = "toggle_invisible.svg"
             }
+        },
+        textSanitize: function (inputText){
+            return inputText.includes("@") || 
+                inputText.includes("#") || 
+                inputText.includes("<") ||
+                inputText.includes(">") ||
+                inputText.includes("/") ||
+                inputText.includes("{") ||
+                inputText.includes("}")
         }
     },
     data(){
@@ -54,12 +63,12 @@ export default {
                 return this.text
             },
             set(newInput){
-                    this.text = newInput
+                this.text = newInput
 
                if(this.inputType == "text"){
                     this.PointerClass = "verified"
                     this.textClass = "input-txt-verified"
-                    if(this.text.includes("@")){
+                    if(this.textSanitize(this.text)){
                         this.PointerClass = "danger"
                         this.textClass = "input-txt-danger"
                     }

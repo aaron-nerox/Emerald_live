@@ -101,6 +101,12 @@
             <x-input 
             icon="search.svg"
             hint="input a text here"
+            inputType="text"
+            />
+            <br> <br>
+            <x-input 
+            icon="search.svg"
+            hint="input a password here"
             inputType="password"
             />
           </div>
