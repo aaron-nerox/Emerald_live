@@ -33,7 +33,8 @@ export default {
             return images("./"+path)
         },
         setSelected: function (index){
-            this.currentSelected = index
+            this.currentSelected = index;
+            this.$emit('onItemSelected',index)
         }
     }
 }

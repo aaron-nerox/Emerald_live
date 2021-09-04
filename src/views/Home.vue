@@ -114,6 +114,7 @@
           <div class="x-card search-container">
             <x-navigation-bar 
               :icons="iconList"
+              @onItemSelected="shout"
             />
           </div>
         </div>
@@ -150,6 +151,11 @@ export default {
     return{
       url: "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM",
       iconList: ["asterisk.svg","bolt.svg","house.svg","color_palette.svg","star.svg"],
+    }
+  },
+  methods: {
+    shout(index){
+      alert('i am indexed ' + index + ' and selected')
     }
   }
 };
