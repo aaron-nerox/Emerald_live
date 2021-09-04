@@ -123,6 +123,12 @@
                 @onItemSelected="shout"
                 :accountImage="url"
               />
+              <div class="spacer"></div>
+              <x-nav-drawer
+                :navItems="itemList"
+                @onItemSelected="shout"
+                :account="account"
+              />
             </div>
           </div>
         </div>
@@ -144,6 +150,7 @@ import XTranslucentSearch from "../components/Xtranslucent.vue";
 import XInput from "../components/Xinput.vue";
 import XNavigationBar from "../components/XnavigationBar.vue";
 import XSideNav from "../components/XSideNav.vue";
+import XNavDrawer from "../components/XNavDrawer.vue";
 
 export default {
   name: "Home",
@@ -156,11 +163,39 @@ export default {
     XInput,
     XNavigationBar,
     XSideNav,
+    XNavDrawer,
   },
   data(){
     return{
       url: "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM",
       iconList: ["asterisk.svg","bolt.svg","house.svg","color_palette.svg","star.svg"],
+      account: {
+        accountImgUrl : "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM",
+        accountName: "Aaron nerostarx",
+        accountEmail: "kechaoui.haroune@gmail.com"
+      },
+      itemList: [
+        {
+          icon: "asterisk.svg",
+          name: "Account manager"
+        },
+        {
+          icon: "bolt.svg",
+          name: "Rapid messaging"
+        },
+        {
+          icon: "house.svg",
+          name: "Home"
+        },
+        {
+          icon: "color_palette.svg",
+          name: "Choices"
+        },
+        {
+          icon: "star.svg",
+          name: "Favorites"
+        },
+      ]
     }
   },
   methods: {
@@ -259,5 +294,9 @@ export default {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+}
+
+.spacer{
+  width: 40px;
 }
 </style>
