@@ -116,6 +116,14 @@
               :icons="iconList"
               @onItemSelected="shout"
             />
+            <br><br>
+            <div class="vertical-nav-container">
+              <x-side-nav 
+                :icons="iconList"
+                @onItemSelected="shout"
+                :accountImage="url"
+              />
+            </div>
           </div>
         </div>
         <div class="x-card component-container">
@@ -135,6 +143,7 @@ import XSearch from "../components/XsearchBar.vue";
 import XTranslucentSearch from "../components/Xtranslucent.vue";
 import XInput from "../components/Xinput.vue";
 import XNavigationBar from "../components/XnavigationBar.vue";
+import XSideNav from "../components/XSideNav.vue";
 
 export default {
   name: "Home",
@@ -146,6 +155,7 @@ export default {
     XTranslucentSearch,
     XInput,
     XNavigationBar,
+    XSideNav,
   },
   data(){
     return{
@@ -242,5 +252,12 @@ export default {
   align-items: center;
   background-color: #7DBEFA;
   color: white;
+}
+
+.vertical-nav-container{
+  width: 90%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
 }
 </style>
