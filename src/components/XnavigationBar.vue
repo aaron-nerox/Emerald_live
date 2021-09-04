@@ -1,8 +1,16 @@
 <template>
   <div class="main-container">
-      <div v-for="(icon,index) in icons" :key="index" class="items-container">
-          <img :src="resolveImageUrl(icon)" alt="icon" class="nav-icon"/>
-          <div class="selector-point"></div>
+      <div v-for="(icon,index) in icons" 
+            :key="index" 
+            class="items-container"
+            @click="setSelected(index)">
+          <img :src="resolveImageUrl(icon)" 
+                alt="icon"
+                :class="['nav-icon'
+                        ,this.currentSelected === index ? selectedIconClass : '']"/>
+
+          <div v-if="this.currentSelected === index" 
+                class="selector-point"></div>
       </div>
   </div>
 </template>
@@ -13,10 +21,19 @@ export default {
     props:{
         icons: Array,
     },
+    data(){
+        return {
+            selectedIconClass: "selected",
+            currentSelected: 0
+        }
+    },
     methods:{
         resolveImageUrl: function (path) {
             let images = require.context('../assets/icons', false, /\.svg$|\.png$/)
             return images("./"+path)
+        },
+        setSelected: function (index){
+            this.currentSelected = index
         }
     }
 }
@@ -49,11 +66,17 @@ export default {
     margin-right: 16px;
     margin-left: 16px;
     margin-bottom: 8px;
+    transition: 200ms ease-in-out;
+}
+
+.nav-icon:hover{
+    filter: invert(79%) sepia(24%) saturate(4313%) hue-rotate(180deg) brightness(101%) contrast(96%);
 }
 
 .selector-point{
     height: 6px;
     width: 6px;
+    margin: 2px;
     border-radius: 50%;
     background-color: #7DBEFA;
 }
