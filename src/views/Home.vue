@@ -98,6 +98,7 @@
             :accountImage="url"/>
           </div>
           <div class="x-card search-container">
+            <p class="subtitle">The X inputs</p>
             <x-input 
             icon="search.svg"
             hint="input a text here"
@@ -108,6 +109,11 @@
             icon="search.svg"
             hint="input a password here"
             inputType="password"
+            />
+          </div>
+          <div class="x-card search-container">
+            <x-navigation-bar 
+              :icons="iconList"
             />
           </div>
         </div>
@@ -127,6 +133,7 @@ import XButton from "../components/Xbutton.vue";
 import XSearch from "../components/XsearchBar.vue";
 import XTranslucentSearch from "../components/Xtranslucent.vue";
 import XInput from "../components/Xinput.vue";
+import XNavigationBar from "../components/XnavigationBar.vue";
 
 export default {
   name: "Home",
@@ -137,10 +144,12 @@ export default {
     XSearch,
     XTranslucentSearch,
     XInput,
+    XNavigationBar,
   },
   data(){
     return{
-      url: "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
+      url: "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM",
+      iconList: ["asterisk.svg","bolt.svg","house.svg","color_palette.svg","star.svg"],
     }
   }
 };
@@ -225,7 +234,7 @@ export default {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(308deg,#7DBEFA,#0479E6);
+  background-color: #7DBEFA;
   color: white;
 }
 </style>
