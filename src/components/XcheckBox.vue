@@ -38,9 +38,8 @@ export default {
 .main-container{
     height: 25px;
     width: 25px;
-    border-radius: 50%;
-    
     padding: 0px;
+    margin: 10px;
 }
 
 .checkmark{
@@ -48,7 +47,7 @@ export default {
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    margin: 0px;
+    margin: 1px;
 }
 
 </style>

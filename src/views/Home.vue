@@ -134,8 +134,13 @@
           </div>
         </div>
         <div class="x-card component-container">
-          <div>
-            <x-check-box @OnCheckBoxChecked="shout"/>
+          <div class="x-card search-container">
+            <p class="subtitle">The X CheckBoxes</p>
+            <div class="checkbox-container">
+              <x-check-box @OnCheckBoxChecked="shout"/>
+              <x-check-box @OnCheckBoxChecked="shout"/>
+              <x-check-box @OnCheckBoxChecked="shout"/>
+            </div>
           </div>
         </div>
       </div>
@@ -303,5 +308,11 @@ export default {
 
 .spacer{
   width: 40px;
+}
+
+.checkbox-container{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
 }
 </style>
