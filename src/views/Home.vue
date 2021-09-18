@@ -142,6 +142,13 @@
               <x-check-box @OnCheckBoxChecked="shout"/>
             </div>
           </div>
+          <div class="x-card">
+            <p class="subtitle">Implementation of the checkboxes</p>
+            <div class="gallery">
+              <image-item v-for="(image,index) in this.imageList" 
+                  :key="index" :Url="image"/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -160,6 +167,7 @@ import XNavigationBar from "../components/XnavigationBar.vue";
 import XSideNav from "../components/XSideNav.vue";
 import XNavDrawer from "../components/XNavDrawer.vue";
 import XCheckBox from "../components/XcheckBox.vue";
+import ImageItem from "../components/ImageItem.vue";
 
 export default {
   name: "Home",
@@ -174,6 +182,7 @@ export default {
     XSideNav,
     XNavDrawer,
     XCheckBox,
+    ImageItem,
   },
   data(){
     return{
@@ -205,7 +214,13 @@ export default {
           icon: "star.svg",
           name: "Favorites"
         },
-      ]
+      ],
+      imageList: ["https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
+        , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
+        , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
+        , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
+        , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
+        , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"]
     }
   },
   methods: {
@@ -314,5 +329,10 @@ export default {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 </style>
