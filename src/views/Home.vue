@@ -112,11 +112,12 @@
             />
           </div>
           <div class="x-card search-container">
+            <p class="subtitle">The X navigation components</p>
             <x-navigation-bar 
               :icons="iconList"
               @onItemSelected="shout"
             />
-            <br><br>
+            <br>
             <div class="vertical-nav-container">
               <x-side-nav 
                 :icons="iconList"
@@ -133,7 +134,9 @@
           </div>
         </div>
         <div class="x-card component-container">
-          <br/><br/><br/><br/><br/>
+          <div>
+            <x-check-box />
+          </div>
         </div>
       </div>
     </div>
@@ -151,6 +154,7 @@ import XInput from "../components/Xinput.vue";
 import XNavigationBar from "../components/XnavigationBar.vue";
 import XSideNav from "../components/XSideNav.vue";
 import XNavDrawer from "../components/XNavDrawer.vue";
+import XCheckBox from "../components/XcheckBox.vue";
 
 export default {
   name: "Home",
@@ -164,6 +168,7 @@ export default {
     XNavigationBar,
     XSideNav,
     XNavDrawer,
+    XCheckBox,
   },
   data(){
     return{
@@ -293,7 +298,7 @@ export default {
   width: 90%;
   display: inline-flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .spacer{
