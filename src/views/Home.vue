@@ -149,6 +149,15 @@
                   :key="index" :Url="image"/>
             </div>
           </div>
+          <div class="map-container">
+            <iframe 
+                    class="map-frame"
+                    width="100%" 
+                    height="300" 
+                    :src="mapUrl" 
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -220,7 +229,8 @@ export default {
         , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
         , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
         , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
-        , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"]
+        , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"],
+      mapUrl: "https://www.google.com/maps/embed/v1/view?key=AIzaSyAUkx6eFkJ0vy0VusCvkdP47KF0mFdKB5E&center=-33.8569,151.2152&zoom=14&maptype=roadmap"
     }
   },
   methods: {
@@ -334,5 +344,16 @@ export default {
 .gallery{
   display: grid;
   grid-template-columns: auto auto auto;
+}
+
+.map-container{
+  width: 80%;
+}
+
+.map-frame{
+  width: 100%;
+  padding: 0px;
+  border-radius: 20px;
+  border: 3px solid white;
 }
 </style>
