@@ -18,6 +18,7 @@ export default {
                 this.checkMark = "filled_checkmark.svg"
                 this.isChecked = false
             }
+            this.$emit("OnCheckBoxChecked", this.isChecked)
         },
         resolveImageUrl: function (path) {
             let images = require.context('../assets/images', false, /\.svg$|\.png$/)

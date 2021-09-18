@@ -135,7 +135,7 @@
         </div>
         <div class="x-card component-container">
           <div>
-            <x-check-box />
+            <x-check-box @OnCheckBoxChecked="shout"/>
           </div>
         </div>
       </div>
