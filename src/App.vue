@@ -49,11 +49,12 @@ html{
 }
 
 #app {
+  display: grid;
   min-height: 100vh;
+  width: 100%;
   background-image: url("./assets/images/background.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  display: grid;
 }
 
 ::-webkit-scrollbar{
@@ -107,5 +108,42 @@ html{
   margin: 20px;
   padding: 15px;
   color: #222;
+}
+
+@media  only screen and (min-width: 720px) {
+
+  #app {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    
+  }
+
+  .h1title{
+    font-family: modulus_bold;
+    font-size: 2.4em;
+  }
+
+  .title{
+    font-family: modulus_bold;
+    font-size: 1.8em;
+  }
+
+  .subtitle{
+    font-family: modulus_bold;
+    font-size: 1.4em;
+    line-height: 1.2;
+  }
+
+  .text{
+    font-family: modulus;
+    font-size: 0.8em;
+  }
+
+  .text-bold{
+    font-family: modulus_bold;
+    font-size: 0.8em;
+  }
 }
 </style>

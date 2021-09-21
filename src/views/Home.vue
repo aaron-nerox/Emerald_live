@@ -2,7 +2,7 @@
   <x-header></x-header>
   <br />
 
-  <section id="about" class="x-card section-container">
+  <!--<section id="about" class="x-card section-container">
     <div class="inner-section-container">
       <img src="../assets/images/logo_image.svg" alt="visual logo" class="about-logo">
       <div class="text-container">
@@ -19,7 +19,7 @@
     <div class="inner-section-container2">
       <br />
       <p class="title"> Example X color palette</p>
-      <div class="inner-section-container">
+      <div class="color-section-container">
         <div  class="color-item" id="color-primary">
           <p class="text">#30F5CA</p>
         </div>
@@ -187,7 +187,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section>-->
 
   <x-footer></x-footer>
 </template>
@@ -195,7 +195,7 @@
 <script>
 import XHeader from "../components/Header.vue";
 import XFooter from "../components/Footer.vue";
-import XButton from "../components/Xbutton.vue";
+/*import XButton from "../components/Xbutton.vue";
 import XSearch from "../components/XsearchBar.vue";
 import XTranslucentSearch from "../components/Xtranslucent.vue";
 import XInput from "../components/Xinput.vue";
@@ -204,14 +204,14 @@ import XSideNav from "../components/XSideNav.vue";
 import XNavDrawer from "../components/XNavDrawer.vue";
 import XCheckBox from "../components/XcheckBox.vue";
 import ImageItem from "../components/ImageItem.vue";
-import TheXMap from "../components/MapView.vue";
+import TheXMap from "../components/MapView.vue";*/
 
 export default {
   name: "Home",
   components: {
     XHeader,
     XFooter,
-    XButton,
+    /*XButton,
     XSearch,
     XTranslucentSearch,
     XInput,
@@ -220,7 +220,7 @@ export default {
     XNavDrawer,
     XCheckBox,
     ImageItem,
-    TheXMap,
+    TheXMap,*/
   },
   data(){
     return{
@@ -282,6 +282,12 @@ export default {
 }
 
 .inner-section-container{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.color-section-container{
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -401,5 +407,50 @@ export default {
 
 .backdrop{
   width: 100%;
+}
+
+@media only screen and (max-width: 720px){
+  .section-container{
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+
+  .inner-section-container{
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .color-section-container{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .divider-container{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-logo{
+    width: 40%;
+    border-radius: 20px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  .text-container{
+    width: 80%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
 }
 </style>

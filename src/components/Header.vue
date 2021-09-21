@@ -67,4 +67,28 @@ export default {
     width: 90px;
     margin: 15px;
 }
+
+@media only screen and (max-width: 720px){
+    .main-header-container {
+        background-image: url("../assets/images/header_background.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 90vh;
+        margin: 0;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title-container>p.h1title{
+        margin: 25px;
+        color: white;
+    }
+
+    .logo-view{
+        width: 35%;
+    }
+}
 </style>

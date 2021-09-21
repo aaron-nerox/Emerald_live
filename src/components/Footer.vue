@@ -64,7 +64,6 @@ export default {
 
 <style scoped>
 .main-container{
-    
     width: 100%;
     background: white;
     border-top-left-radius: 20px;
@@ -93,5 +92,12 @@ export default {
 
 .thex-logo{
     height: 120px;
+}
+
+@media only screen and (max-width: 720px){
+    .main-container>p.subtitle{
+        width: 70%;
+        text-align: center;
+    }
 }
 </style>
