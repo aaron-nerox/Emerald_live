@@ -42,6 +42,7 @@ export default {
 }
 
 .main-container{
+    width: 100%;
     background: white;
     border-radius: 1000px;
     display: inline-flex;
@@ -68,6 +69,7 @@ export default {
 }
 
 .input-holder{
+    width: 80%;
     outline: none;
     background: none;
     border: none;

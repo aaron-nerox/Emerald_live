@@ -1,8 +1,10 @@
+/* eslint-disable vue/no-unused-components */
+/* eslint-disable vue/no-unused-components */
 <template>
   <x-header></x-header>
   <br />
 
-  <!--<section id="about" class="x-card section-container">
+  <section id="about" class="x-card section-container">
     <div class="inner-section-container">
       <img src="../assets/images/logo_image.svg" alt="visual logo" class="about-logo">
       <div class="text-container">
@@ -82,6 +84,7 @@
                   Activate
               </x-button>
             </div>
+
             <div>
               <x-button 
                 class="button-styling"
@@ -114,7 +117,8 @@
             icon="search_white.svg"
             :accountImage="url"/>
           </div>
-          <div class="x-card gradient-container">
+
+          <!--<div class="x-card gradient-container">
             <p class="subtitle">The X inputs</p>
             <x-input 
             icon="user.svg"
@@ -127,8 +131,9 @@
             hint="input a password here"
             inputType="password"
             />
-          </div>
-          <div class="x-card gradient-container">
+          </div>-->
+
+          <!--<div class="x-card gradient-container">
             <p class="subtitle">The X navigation components</p>
             <x-navigation-bar 
               :icons="iconList"
@@ -148,11 +153,12 @@
                 :account="account"
               />
             </div>
-          </div>
+          </div>-->
+
         </div>
 
         <div class="x-card component-container">
-          <div class="x-card gradient-container">
+          <!--<div class="x-card gradient-container">
             <p class="subtitle">The X CheckBoxes</p>
             <div class="checkbox-container">
               <x-check-box @OnCheckBoxChecked="shout"/>
@@ -183,11 +189,12 @@
             <img src="../assets/images/backdrop.png" alt="backdrop" class="backdrop"/>
             <br /><br />
             <img src="../assets/images/extended_backdrop.png" alt="backdrop" class="backdrop"/>
-          </div>
+          </div>-->
         </div>
       </div>
+
     </div>
-  </section>-->
+  </section>
 
   <x-footer></x-footer>
 </template>
@@ -195,10 +202,10 @@
 <script>
 import XHeader from "../components/Header.vue";
 import XFooter from "../components/Footer.vue";
-/*import XButton from "../components/Xbutton.vue";
+import XButton from "../components/Xbutton.vue";
 import XSearch from "../components/XsearchBar.vue";
 import XTranslucentSearch from "../components/Xtranslucent.vue";
-import XInput from "../components/Xinput.vue";
+/*import XInput from "../components/Xinput.vue";
 import XNavigationBar from "../components/XnavigationBar.vue";
 import XSideNav from "../components/XSideNav.vue";
 import XNavDrawer from "../components/XNavDrawer.vue";
@@ -211,10 +218,11 @@ export default {
   components: {
     XHeader,
     XFooter,
-    /*XButton,
+    XButton,
     XSearch,
+    // eslint-disable-next-line vue/no-unused-components
     XTranslucentSearch,
-    XInput,
+    /*XInput,
     XNavigationBar,
     XSideNav,
     XNavDrawer,
@@ -348,7 +356,7 @@ export default {
 
 .transparent-container{
   background-color: #defffc;
-  width: 80%;
+  width: 90%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -358,7 +366,7 @@ export default {
 
 
 .gradient-container{
-  width: 80%;
+  width: 90%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -438,14 +446,14 @@ export default {
   }
 
   .about-logo{
-    width: 40%;
+    width: 60%;
     border-radius: 20px;
     margin-right: 0px;
     margin-bottom: 30px;
   }
 
   .text-container{
-    width: 80%;
+    width: 95%;
     display: inline-flex;
     flex-direction: column;
     align-items: center;

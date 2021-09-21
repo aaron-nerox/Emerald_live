@@ -42,6 +42,7 @@ export default {
 }
 
 .main-container{
+    width: 100%;
     background: rgba(255, 255, 255, 0.37);
     border-radius: 1000px;
     display: inline-flex;
@@ -57,6 +58,7 @@ export default {
 }
 
 .account-image{
+    
     height: 30px;
     border-radius: 50%;
     margin: 8px;
@@ -68,6 +70,7 @@ export default {
 }
 
 .input-holder{
+    width: 80%;
     outline: none;
     background: none;
     border: none;
