@@ -1,7 +1,7 @@
 <template>
   <div :class="[mainClass
   , isDisabled ? inactiveClass : activeClass
-  , iconOnly ? 'Square' : '']">
+  , iconOnly ? 'Square' : 'button-padding']">
       <img v-if="iconShown" :src="resolveImageUrl(icn)" alt="button icon" class="button-icon">
       <div v-else class="spacer"></div>
       <div v-if="textShown" class="content">
@@ -39,24 +39,34 @@ export default {
 
 <style scoped>
 .disabled{
-    background-image: linear-gradient(308deg,grey,grey);
+    background-image: linear-gradient(308deg,#AAAAAA,#AAAAAA);
 }
 
 .disabled:hover{
-    background-image: linear-gradient(308deg,rgb(83, 83, 83),rgb(83, 83, 83));
+    background-image: linear-gradient(308deg,#999,#999);
 }
 
 .enabled{
-    background-image: linear-gradient(308deg,#7DBEFA,#0479E6);
+    background-image: linear-gradient(308deg,#02E1CE,#3BC0E3);
 }
 
 .enabled:hover{
-    background-image: linear-gradient(308deg,#ABD6FF ,#7DBEFA);
+    background-image: linear-gradient(308deg,#62fff2 ,#71ddf8);
 }
 
 .Square{
     height: 30px;
     width: 30px;
+    padding: 10px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.button-padding{
+    width: 120px;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 .button-body{
@@ -64,7 +74,6 @@ export default {
     font-family: modulus_bold;
     font-size: 1.2em;
     color: white;
-    padding: 8px;
     margin: 10px;
     display: inline-flex;
     flex-direction: row;
@@ -73,16 +82,17 @@ export default {
 }
 
 .button-icon{
-    height: 20px;
-    width: 30px;
-    margin: 2px;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
 }
 
 .content{
-    margin-right: 8px;
-}
-
-.spacer{
-    margin-left: 8px;
+    width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 </style>

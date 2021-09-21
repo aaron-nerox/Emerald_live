@@ -25,23 +25,23 @@ export default {
 }
 
 #color-primary{
-  background-color: #7DBEFA;
+  background-color: #30F5CA;
 }
 
 #color-primary-dark{
-  background-color: #0479E6;
+  background-color: #3BC0E3;
 }
 
 #color-accent{
-  background-color: #ABD6FF;
+  background-color: #62fff2;
 }
 
 #color-light{
-  background-color: #D9EDFF;
+  background-color: #d1fffb;
 }
 
 #color-gradient{
-  background-image: linear-gradient(308deg,#7DBEFA,#0479E6);
+  background-image: linear-gradient(308deg,#30F5CA,#3BC0E3);
 }
 
 html{
@@ -66,13 +66,13 @@ html{
 }
 
 ::-webkit-scrollbar-thumb{
-  background: rgb(137, 237, 255);
+  background: #30F5CA;
   border-radius: 100px;
   transition: 300ms ease-in;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background: rgb(0, 217, 255);
+  background: #3BC0E3;
 }
 
 .h1title{

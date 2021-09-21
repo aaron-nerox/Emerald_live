@@ -1,5 +1,7 @@
 <template>
   <x-header></x-header>
+  <br />
+
   <section id="about" class="x-card section-container">
     <div class="inner-section-container">
       <img src="../assets/images/logo_image.svg" alt="visual logo" class="about-logo">
@@ -12,6 +14,7 @@
       </div>
     </div>
   </section>
+
   <section id="colors" class="x-card section-container">
     <div class="inner-section-container2">
       <p class="title"> Example X color palette</p>
@@ -34,57 +37,69 @@
       </div>
     </div>
   </section>
+
   <section id="examples" class="x-card section-container">
     <div class="inner-section-container2">
+
       <p class="title">Take a look at our components</p>
+
       <div class="divider-container">
         <div class="x-card component-container">
           <div class="x-card button-container">
             <p class="subtitle">The X interactive buttons</p>
             <div>
-              <x-button icn="facebook.svg" 
+              <x-button icn="moon.svg" 
                 :textOnly="false" 
                 :iconOnly="true"
                 :isDisabled="false">
-                  Example
+                  Activate
               </x-button>
-              <x-button icn="facebook.svg" 
+              <x-button icn="moon.svg" 
                 :textOnly="false" 
                 :iconOnly="true"
                 :isDisabled="true">
-                  Example
+                  Activate
+              </x-button>
+            </div>
+
+            <div>
+              <x-button 
+                class="button-styling"
+                icn="moon.svg" 
+                :textOnly="true" 
+                :iconOnly="false"
+                :isDisabled="false">
+                  Activate
+              </x-button>
+              <x-button 
+                class="button-styling"
+                icn="moon.svg" 
+                :textOnly="true" 
+                :iconOnly="false"
+                :isDisabled="true">
+                  Activate
               </x-button>
             </div>
             <div>
               <x-button 
-                icn="facebook.svg" 
-                :textOnly="true" 
-                :iconOnly="false"
-                :isDisabled="false">
-                  Example
-              </x-button>
-              <x-button icn="facebook.svg" 
-                :textOnly="true" 
-                :iconOnly="false"
-                :isDisabled="true">
-                  Example
-              </x-button>
-            </div>
-            <div>
-              <x-button icn="facebook.svg" 
+                class="button-styling"
+                icn="moon.svg" 
                 :textOnly="false" 
                 :iconOnly="false"
                 :isDisabled="false">
-                  Example
+                  Activate
               </x-button>
-              <x-button icn="facebook.svg" 
+              <x-button 
+                class="button-styling"
+                icn="moon.svg" 
                 :textOnly="false" 
                 :iconOnly="false"
                 :isDisabled="true">
-                  Example
+                  Activate
               </x-button>
             </div>
           </div>
+
           <div class="x-card search-container">
             <p class="subtitle">The X search bars</p>
             <x-search 
@@ -100,13 +115,13 @@
           <div class="x-card search-container">
             <p class="subtitle">The X inputs</p>
             <x-input 
-            icon="search.svg"
-            hint="input a text here"
+            icon="user.svg"
+            hint="input a name here"
             inputType="text"
             />
             <br> <br>
             <x-input 
-            icon="search.svg"
+            icon="user.svg"
             hint="input a password here"
             inputType="password"
             />
@@ -133,6 +148,7 @@
             </div>
           </div>
         </div>
+
         <div class="x-card component-container">
           <div class="x-card search-container">
             <p class="subtitle">The X CheckBoxes</p>
@@ -170,6 +186,7 @@
       </div>
     </div>
   </section>
+
   <x-footer></x-footer>
 </template>
 
@@ -259,6 +276,7 @@ export default {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 .inner-section-container{
@@ -314,7 +332,6 @@ export default {
 }
 
 .component-container{
-  background-color: #D9EDFF;
   width: 100%;
   display: inline-flex;
   flex-direction: column;
@@ -322,11 +339,14 @@ export default {
 }
 
 .button-container{
+  background-color: #d9edff6e;
   width: 80%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
 }
+
+
 
 .search-container{
   width: 80%;
