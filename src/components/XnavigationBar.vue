@@ -71,7 +71,7 @@ export default {
 }
 
 .nav-icon:hover{
-    filter: invert(79%) sepia(24%) saturate(4313%) hue-rotate(180deg) brightness(101%) contrast(96%);
+    filter: invert(83%) sepia(23%) saturate(1311%) hue-rotate(98deg) brightness(108%) contrast(92%);
 }
 
 .selector-point{
@@ -79,10 +79,10 @@ export default {
     width: 6px;
     margin: 2px;
     border-radius: 50%;
-    background-color: #7DBEFA;
+    background-color: #30F5CA;
 }
 
 .selected{
-    filter: invert(79%) sepia(24%) saturate(4313%) hue-rotate(180deg) brightness(101%) contrast(96%);
+    filter: invert(83%) sepia(23%) saturate(1311%) hue-rotate(98deg) brightness(108%) contrast(92%);
 }
 </style>

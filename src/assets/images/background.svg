@@ -8,6 +8,6 @@
         <rect x="0" y="0" width="4500" height="4500" style="fill:url(#_Linear1);"/>
     </g>
     <defs>
-        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.54994e-13,4500,-2531.25,2.75546e-13,2250,0)"><stop offset="0" style="stop-color:rgb(2,225,206);stop-opacity:0.25"/><stop offset="1" style="stop-color:rgb(4,121,230);stop-opacity:0.25"/></linearGradient>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-4499.99,-4500,2531.25,-8000,4499.99,4500)"><stop offset="0" style="stop-color:rgb(2,225,206);stop-opacity:0.25"/><stop offset="0.56" style="stop-color:rgb(42,202,221);stop-opacity:0.25"/><stop offset="1" style="stop-color:rgb(59,192,227);stop-opacity:0.25"/></linearGradient>
     </defs>
 </svg>

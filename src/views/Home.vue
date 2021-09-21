@@ -17,19 +17,20 @@
 
   <section id="colors" class="x-card section-container">
     <div class="inner-section-container2">
+      <br />
       <p class="title"> Example X color palette</p>
       <div class="inner-section-container">
         <div  class="color-item" id="color-primary">
-          <p class="text">#7DBEFA</p>
+          <p class="text">#30F5CA</p>
         </div>
         <div  class="color-item" id="color-primary-dark">
-          <p class="text">#0479E6</p>
+          <p class="text">#3BC0E3</p>
         </div>
         <div  class="color-item" id="color-accent">
-          <p class="text">#ABD6FF</p>
+          <p class="text">#62fff2</p>
         </div>
         <div  class="color-item" id="color-light">
-          <p class="text">#D9EDFF</p>
+          <p class="text">#d1fffb</p>
         </div>
         <div  class="color-item" id="color-gradient">
           <p class="text">Gradient</p>
@@ -40,12 +41,12 @@
 
   <section id="examples" class="x-card section-container">
     <div class="inner-section-container2">
-
+      <br />
       <p class="title">Take a look at our components</p>
 
       <div class="divider-container">
         <div class="x-card component-container">
-          <div class="x-card button-container">
+          <div class="x-card transparent-container">
             <p class="subtitle">The X interactive buttons</p>
             <div>
               <x-button icn="moon.svg" 
@@ -100,7 +101,7 @@
             </div>
           </div>
 
-          <div class="x-card search-container">
+          <div class="x-card gradient-container">
             <p class="subtitle">The X search bars</p>
             <x-search 
             hint="Search for something" 
@@ -112,7 +113,7 @@
             icon="search_white.svg"
             :accountImage="url"/>
           </div>
-          <div class="x-card search-container">
+          <div class="x-card gradient-container">
             <p class="subtitle">The X inputs</p>
             <x-input 
             icon="user.svg"
@@ -126,7 +127,7 @@
             inputType="password"
             />
           </div>
-          <div class="x-card search-container">
+          <div class="x-card gradient-container">
             <p class="subtitle">The X navigation components</p>
             <x-navigation-bar 
               :icons="iconList"
@@ -150,7 +151,7 @@
         </div>
 
         <div class="x-card component-container">
-          <div class="x-card search-container">
+          <div class="x-card gradient-container">
             <p class="subtitle">The X CheckBoxes</p>
             <div class="checkbox-container">
               <x-check-box @OnCheckBoxChecked="shout"/>
@@ -158,7 +159,7 @@
               <x-check-box @OnCheckBoxChecked="shout"/>
             </div>
           </div>
-          <div class="x-card">
+          <div class="x-card gallery-container">
             <p class="subtitle">Implementation of the checkboxes</p>
             <div class="gallery">
               <image-item v-for="(image,index) in this.imageList" 
@@ -176,7 +177,7 @@
             />
             <br />
           </div>
-          <div class="x-card">
+          <div class="x-card gallery-container">
             <p class="subtitle" align="center">The X backdrops</p>
             <img src="../assets/images/backdrop.png" alt="backdrop" class="backdrop"/>
             <br /><br />
@@ -338,22 +339,23 @@ export default {
   align-items: center;
 }
 
-.button-container{
-  background-color: #d9edff6e;
+.transparent-container{
+  background-color: #defffc;
   width: 80%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 
 
-.search-container{
+.gradient-container{
   width: 80%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  background-color: #7DBEFA;
+  background-image: linear-gradient(308deg,#02E1CE,#3BC0E3);
   color: white;
 }
 
@@ -371,6 +373,10 @@ export default {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+}
+
+.gallery-container{
+  background-color: #defffc;
 }
 
 .gallery{
