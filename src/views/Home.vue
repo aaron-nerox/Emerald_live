@@ -150,14 +150,15 @@
             </div>
           </div>
           <div class="map-container">
+            <br/>
             <the-x-map 
               class="map-frame"
-
               :ApiKey="this.ApiKey"
               :CenterCoords="this.MapCenter"
               :zoom="this.zoomLevel"
               :DefaultUi="this.DefaultUi"
             />
+            <br />
           </div>
           <div class="x-card">
             <p class="subtitle" align="center">The X backdrops</p>
@@ -247,7 +248,7 @@ export default {
   },
   methods: {
     shout(index){
-      alert('i am indexed ' + index + ' and selected')
+      console.log("item of index "+index+" was selected")
     },
   },
 };
@@ -337,14 +338,13 @@ export default {
 }
 
 .vertical-nav-container{
-  width: 90%;
   display: inline-flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .spacer{
-  width: 40px;
+  width: 50px;
 }
 
 .checkbox-container{

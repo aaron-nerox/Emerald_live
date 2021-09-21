@@ -54,7 +54,7 @@ export default {
             PointerClass: "neutral",
             textClass: "input-txt-neutral",
             mainType: this.inputType,
-            passwordIcon: "toggle_invisible.svg"
+            passwordIcon: "toggle_visible.svg"
         }
     },
     computed: {
