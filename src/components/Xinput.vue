@@ -101,6 +101,7 @@ export default {
 }
 
 .main-container{
+    width: 100%;
     background: white;
     border-radius: 1000px;
     display: inline-flex;
@@ -111,7 +112,7 @@ export default {
 .pointer{
     border-radius: 50%;
     height: 20px;
-    width: 20px;
+    min-width: 20px;
     margin: 8px;
 }
 
@@ -134,6 +135,7 @@ export default {
 }
 
 .input-style{
+    width: 70%;
     margin: 8px;
     margin-right: 24px;
     outline: none;

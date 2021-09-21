@@ -118,20 +118,20 @@
             :accountImage="url"/>
           </div>
 
-          <!--<div class="x-card gradient-container">
+          <div class="x-card gradient-container">
             <p class="subtitle">The X inputs</p>
             <x-input 
-            icon="user.svg"
-            hint="input a name here"
-            inputType="text"
+              icon="user.svg"
+              hint="input a name here"
+              inputType="text"
             />
             <br> <br>
             <x-input 
-            icon="user.svg"
-            hint="input a password here"
-            inputType="password"
+              icon="user.svg"
+              hint="input a password here"
+              inputType="password"
             />
-          </div>-->
+          </div>
 
           <!--<div class="x-card gradient-container">
             <p class="subtitle">The X navigation components</p>
@@ -205,8 +205,8 @@ import XFooter from "../components/Footer.vue";
 import XButton from "../components/Xbutton.vue";
 import XSearch from "../components/XsearchBar.vue";
 import XTranslucentSearch from "../components/Xtranslucent.vue";
-/*import XInput from "../components/Xinput.vue";
-import XNavigationBar from "../components/XnavigationBar.vue";
+import XInput from "../components/Xinput.vue";
+/*import XNavigationBar from "../components/XnavigationBar.vue";
 import XSideNav from "../components/XSideNav.vue";
 import XNavDrawer from "../components/XNavDrawer.vue";
 import XCheckBox from "../components/XcheckBox.vue";
@@ -220,10 +220,9 @@ export default {
     XFooter,
     XButton,
     XSearch,
-    // eslint-disable-next-line vue/no-unused-components
     XTranslucentSearch,
-    /*XInput,
-    XNavigationBar,
+    XInput,
+    /*XNavigationBar,
     XSideNav,
     XNavDrawer,
     XCheckBox,
