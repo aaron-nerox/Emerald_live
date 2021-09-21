@@ -6,19 +6,59 @@
              , so feel free to just yoink that from here &#128521;.</p>
         <p class="text-bold">Follow me on social media</p>
         <div class="social-container">
-            <a href="https://www.behance.net/aaron_nerox" target="_blank"><img src="../assets/icons/behance.svg" alt="icon" class="social-icon"></a>
-            <a href="https://www.facebook.com/Thenerostarx" target="_blank"><img src="../assets/icons/facebook.svg" alt="icon" class="social-icon"></a>
-            <a href="https://www.instagram.com/nerostarx" target="_blank"><img src="../assets/icons/instagram.svg" alt="icon" class="social-icon"></a>
-            <a href="https://twitter.com/nerostarx" target="_blank"><img src="../assets/icons/twitter.svg" alt="icon" class="social-icon"></a>
-            <a href="https://github.com/NeroStarx" target="_blank"><img src="../assets/icons/github.svg" alt="icon" class="social-icon"></a>
+            <x-button
+                class="social-icon"
+                @click="openLink('https://www.behance.net/aaron_nerox')"
+                icn="behance.svg" 
+                :textOnly="false" 
+                :iconOnly="true"
+                :isDisabled="false">x</x-button>
+            <x-button 
+                class="social-icon"
+                @click="openLink('https://www.facebook.com/Thenerostarx')"
+                icn="facebook.svg" 
+                :textOnly="false" 
+                :iconOnly="true"
+                :isDisabled="false">x</x-button>
+            <x-button 
+                class="social-icon"
+                @click="openLink('https://www.instagram.com/nerostarx')"
+                icn="instagram.svg" 
+                :textOnly="false" 
+                :iconOnly="true"
+                :isDisabled="false">x</x-button>
+            <x-button 
+                class="social-icon"
+                @click="openLink('https://twitter.com/nerostarx')"
+                icn="twitter.svg" 
+                :textOnly="false" 
+                :iconOnly="true"
+                :isDisabled="false">x</x-button>
+            <x-button 
+                class="social-icon"
+                @click="openLink('https://github.com/NeroStarx')"
+                icn="github.svg" 
+                :textOnly="false" 
+                :iconOnly="true"
+                :isDisabled="false">x</x-button>
         </div>
         <p class="text-bold">Built from &#128160; by aaron for the X</p>
     </div>
 </template>
 
 <script>
+import XButton from "./Xbutton.vue";
+
 export default {
     name: "XFooter",
+    components:{
+        XButton,
+    },
+    methods:{
+        openLink(link){
+            window.open(link)
+        }
+    }
 }
 </script>
 
@@ -45,26 +85,11 @@ export default {
 }
 
 .social-container{
-    margin-left: auto;
-    margin-right: auto;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
 }
 
-.social-icon{
-    width: 30px;
-    display: inline-block;
-    background-color: #ABD6FF;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 1000px;
-    transition: 300ms ease-in-out;
-}
-
-.social-icon:hover{
-    background-color: #7DBEFA;
-}
 
 .thex-logo{
     height: 120px;

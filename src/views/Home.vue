@@ -43,6 +43,7 @@
     <div class="inner-section-container2">
       <br />
       <p class="title">Take a look at our components</p>
+      <p class="subtitle">These components are more dynamic than you think, as a hint try to interact with them.</p>
 
       <div class="divider-container">
         <div class="x-card component-container">
