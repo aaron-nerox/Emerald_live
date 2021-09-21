@@ -150,13 +150,20 @@
             </div>
           </div>
           <div class="map-container">
-            <iframe 
-                    class="map-frame"
-                    width="100%" 
-                    height="300" 
-                    :src="mapUrl" 
-              frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-            </iframe>
+            <the-x-map 
+              class="map-frame"
+
+              :ApiKey="this.ApiKey"
+              :CenterCoords="this.MapCenter"
+              :zoom="this.zoomLevel"
+              :DefaultUi="this.DefaultUi"
+            />
+          </div>
+          <div class="x-card">
+            <p class="subtitle" align="center">The X backdrops</p>
+            <img src="../assets/images/backdrop.png" alt="backdrop" class="backdrop"/>
+            <br /><br />
+            <img src="../assets/images/extended_backdrop.png" alt="backdrop" class="backdrop"/>
           </div>
         </div>
       </div>
@@ -177,6 +184,7 @@ import XSideNav from "../components/XSideNav.vue";
 import XNavDrawer from "../components/XNavDrawer.vue";
 import XCheckBox from "../components/XcheckBox.vue";
 import ImageItem from "../components/ImageItem.vue";
+import TheXMap from "../components/MapView.vue";
 
 export default {
   name: "Home",
@@ -192,6 +200,7 @@ export default {
     XNavDrawer,
     XCheckBox,
     ImageItem,
+    TheXMap,
   },
   data(){
     return{
@@ -230,14 +239,17 @@ export default {
         , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
         , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"
         , "https://i.picsum.photos/id/896/200/200.jpg?hmac=GtnSTSOmlmBRvu2fpraj0-9azTBV0t32V07JLyAVPhM"],
-      mapUrl: "https://www.google.com/maps/embed/v1/view?key=AIzaSyAUkx6eFkJ0vy0VusCvkdP47KF0mFdKB5E&center=-33.8569,151.2152&zoom=14&maptype=roadmap"
+      zoomLevel: 10,
+      MapCenter: {lat: 36.728, lng: 3.128},
+      DefaultUi: false,
+      ApiKey: "AIzaSyAUkx6eFkJ0vy0VusCvkdP47KF0mFdKB5E",
     }
   },
   methods: {
     shout(index){
       alert('i am indexed ' + index + ' and selected')
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -347,13 +359,20 @@ export default {
 }
 
 .map-container{
-  width: 80%;
+  width: 100%;
 }
 
 .map-frame{
-  width: 100%;
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
   padding: 0px;
   border-radius: 20px;
   border: 3px solid white;
+}
+
+.backdrop{
+  width: 100%;
 }
 </style>
