@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
 .main-container{
-    width: max-content;
+    width: 100%;
     background-color: white;
     border-radius: 20px;
     padding: 8px;
@@ -138,5 +138,11 @@ export default {
 
 .selected>img{
     filter: invert(83%) sepia(23%) saturate(1311%) hue-rotate(98deg) brightness(108%) contrast(92%);
+}
+
+@media only screen and (max-width: 720px){
+    .main-container{
+        width: 100%;
+    }
 }
 </style>

@@ -133,13 +133,13 @@
             />
           </div>
 
-          <!--<div class="x-card gradient-container">
+          <div class="x-card gradient-container">
             <p class="subtitle">The X navigation components</p>
             <x-navigation-bar 
               :icons="iconList"
               @onItemSelected="shout"
             />
-            <br>
+            <br /><br />
             <div class="vertical-nav-container">
               <x-side-nav 
                 :icons="iconList"
@@ -153,7 +153,7 @@
                 :account="account"
               />
             </div>
-          </div>-->
+          </div>
 
         </div>
 
@@ -206,10 +206,10 @@ import XButton from "../components/Xbutton.vue";
 import XSearch from "../components/XsearchBar.vue";
 import XTranslucentSearch from "../components/Xtranslucent.vue";
 import XInput from "../components/Xinput.vue";
-/*import XNavigationBar from "../components/XnavigationBar.vue";
+import XNavigationBar from "../components/XnavigationBar.vue";
 import XSideNav from "../components/XSideNav.vue";
 import XNavDrawer from "../components/XNavDrawer.vue";
-import XCheckBox from "../components/XcheckBox.vue";
+/*import XCheckBox from "../components/XcheckBox.vue";
 import ImageItem from "../components/ImageItem.vue";
 import TheXMap from "../components/MapView.vue";*/
 
@@ -222,10 +222,10 @@ export default {
     XSearch,
     XTranslucentSearch,
     XInput,
-    /*XNavigationBar,
+    XNavigationBar,
     XSideNav,
     XNavDrawer,
-    XCheckBox,
+    /*XCheckBox,
     ImageItem,
     TheXMap,*/
   },
@@ -457,6 +457,16 @@ export default {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .vertical-nav-container{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spacer{
+    height: 30px;
   }
 
 }

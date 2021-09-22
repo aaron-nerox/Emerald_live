@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
 .main-container{
-    width: max-content;
+    width: 80%;
     background-color: white;
     border-radius: 20px;
     padding-left: 16px;
@@ -55,7 +55,7 @@ export default {
 }
 
 .items-container{
-    
+    width: 20%;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -84,5 +84,27 @@ export default {
 
 .selected{
     filter: invert(83%) sepia(23%) saturate(1311%) hue-rotate(98deg) brightness(108%) contrast(92%);
+}
+
+@media only screen and (max-width: 720px){
+    .main-container{
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        display: inline-block;
+        align-items: center;
+    }
+
+    .items-container{
+        width: 20%;
+        height: min-content;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 </style>
