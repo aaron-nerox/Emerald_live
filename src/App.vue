@@ -145,5 +145,13 @@ html{
     font-family: modulus_bold;
     font-size: 0.8em;
   }
+
+  .x-card{
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    color: #222;
+  }
 }
 </style>

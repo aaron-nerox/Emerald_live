@@ -173,8 +173,7 @@
                   :key="index" :Url="image"/>
             </div>
           </div>
-          <div class="map-container">
-            <br/>
+          <div class="x-card map-container">
             <the-x-map 
               class="map-frame"
               :ApiKey="this.ApiKey"
@@ -182,7 +181,6 @@
               :zoom="this.zoomLevel"
               :DefaultUi="this.DefaultUi"
             />
-            <br />
           </div>
           <div class="x-card gallery-container">
             <p class="subtitle" align="center">The X backdrops</p>
@@ -390,6 +388,7 @@ export default {
 }
 
 .gallery-container{
+  width: 90%;
   background-color: #defffc;
 }
 
@@ -400,12 +399,13 @@ export default {
 
 .map-container{
   width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .map-frame{
-  width: 87%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 93%;
   height: 500px;
   padding: 0px;
   border-radius: 20px;
@@ -442,6 +442,13 @@ export default {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
+  }
+
+  .component-container{
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .about-logo{
@@ -469,12 +476,31 @@ export default {
     height: 30px;
   }
 
+  .gallery-container{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
   .gallery{
-    width: 90%;
+    width: 80%;
     margin-right: auto;
     margin-left: auto;
     display: grid;
     grid-template-columns: auto auto;
+  }
+
+  .map-container{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .map-frame{
+    width: 100%;
+    height: 400px;
+    padding: 0px;
+    border-radius: 20px;
+    border: 3px solid white;
   }
 
 }
