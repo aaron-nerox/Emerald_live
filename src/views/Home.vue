@@ -158,7 +158,7 @@
         </div>
 
         <div class="x-card component-container">
-          <!--<div class="x-card gradient-container">
+          <div class="x-card gradient-container">
             <p class="subtitle">The X CheckBoxes</p>
             <div class="checkbox-container">
               <x-check-box @OnCheckBoxChecked="shout"/>
@@ -189,7 +189,7 @@
             <img src="../assets/images/backdrop.png" alt="backdrop" class="backdrop"/>
             <br /><br />
             <img src="../assets/images/extended_backdrop.png" alt="backdrop" class="backdrop"/>
-          </div>-->
+          </div>
         </div>
       </div>
 
@@ -209,9 +209,9 @@ import XInput from "../components/Xinput.vue";
 import XNavigationBar from "../components/XnavigationBar.vue";
 import XSideNav from "../components/XSideNav.vue";
 import XNavDrawer from "../components/XNavDrawer.vue";
-/*import XCheckBox from "../components/XcheckBox.vue";
+import XCheckBox from "../components/XcheckBox.vue";
 import ImageItem from "../components/ImageItem.vue";
-import TheXMap from "../components/MapView.vue";*/
+import TheXMap from "../components/MapView.vue";
 
 export default {
   name: "Home",
@@ -225,9 +225,9 @@ export default {
     XNavigationBar,
     XSideNav,
     XNavDrawer,
-    /*XCheckBox,
+    XCheckBox,
     ImageItem,
-    TheXMap,*/
+    TheXMap,
   },
   data(){
     return{
@@ -467,6 +467,14 @@ export default {
 
   .spacer{
     height: 30px;
+  }
+
+  .gallery{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: auto auto;
   }
 
 }

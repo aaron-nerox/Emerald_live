@@ -50,4 +50,21 @@ export default {
     margin: 1px;
 }
 
+@media only screen and (max-width: 720px){
+    .main-container{
+        height: 20px;
+        width: 20px;
+        padding: 0px;
+        margin: 10px;
+    }
+
+    .checkmark{
+        border: 2px solid white;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        margin: 1px;
+}
+}
+
 </style>

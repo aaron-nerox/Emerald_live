@@ -54,4 +54,33 @@ export default {
 .selected{
     opacity: 0.7;
 }
+
+@media only screen and (max-width: 720px){
+    .main-container{
+        position: relative;
+        height: 85px;
+        width: 85px;
+        margin: 4px;
+    }
+
+    .checkbox{
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 3;
+    }
+
+    .image{
+        width:100%;
+        height: 100%;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    .selected{
+        opacity: 0.7;
+    }
+}
 </style>
