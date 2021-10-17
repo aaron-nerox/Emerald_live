@@ -1,4 +1,5 @@
-# thexdesign
+# The X Live website
+## Designed by aaron@The X
 
 ## Project setup
 ```
